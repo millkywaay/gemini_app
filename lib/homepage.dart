@@ -46,10 +46,10 @@ class _HomepageState extends ConsumerState<Homepage> {
   Widget build(BuildContext context) {
     final currentTheme = ref.watch(themeProvider);
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: AppBar(
         centerTitle: false,
-        backgroundColor: Theme.of(context).colorScheme.background,
+        backgroundColor: Theme.of(context).colorScheme.surface,
         elevation: 1,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -154,8 +154,8 @@ class _HomepageState extends ConsumerState<Homepage> {
                   Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: GestureDetector(
-                      child: Image.asset('assets/send.png'),
                       onTap: callGeminiModel,
+                      child: Image.asset('assets/send.png'),
                     ),
                   )
                 ],
