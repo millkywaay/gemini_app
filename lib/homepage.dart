@@ -32,7 +32,7 @@ class _HomepageState extends ConsumerState<Homepage> {
 
       setState(() {
         _messages.add(Message(text: response.text!, isUser: false));
-        // _isLoading = false;
+        _isLoading = false;
       });
       _controller.clear();
     } catch(e){
